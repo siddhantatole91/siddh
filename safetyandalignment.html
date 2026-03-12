@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment & Safety · AI Concept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f4fa; /* soft light background */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: white;
+            border-radius: 2rem;
+            padding: 2.5rem 2.8rem;
+            box-shadow: 0 12px 30px rgba(0, 20, 40, 0.08), 0 4px 10px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e0e9f2;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px rgba(27, 55, 96, 0.12);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e9f0fa;
+            color: #1d4a7c;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 0.35rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.2rem;
+            border: 1px solid #b9d1ef;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+            border-left: 6px solid #2563eb;
+            padding-left: 1.3rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #2c3f5f;
+            margin-bottom: 1.8rem;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #2d3a4f;
+            margin-bottom: 1.8rem;
+            line-height: 1.6;
+        }
+
+        p:first-of-type {
+            font-weight: 400;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.2rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .feature-list span {
+            background: #f2f7ff;
+            border: 1px solid #cbdff5;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #144d77;
+        }
+
+        hr {
+            border: none;
+            border-top: 1.5px dashed #b9cfec;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .footer-note {
+            color: #556c88;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #2563eb;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 1px solid;
+        }
+
+        /* responsive */
+        @media (max-width: 500px) {
+            .card { padding: 2rem 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="tag">AI SAFETY FRAMEWORK</div>
+        <h1>Alignment & Safety</h1>
+        <div class="subtitle">Making sure AI works according to human values</div>
+
+        <p>
+            Alignment research is about teaching AI systems to understand and follow human intentions. 
+            As AI becomes more powerful and starts making complex decisions, it is important to ensure 
+            that it behaves correctly, is easy to understand, and helps people even in new situations.
+        </p>
+
+        <p>
+            AI safety focuses on making systems reliable and responsible. 
+            It includes things like <strong>learning human values</strong>, 
+            <strong>allowing humans to correct AI</strong>, and 
+            <strong>designing systems that fail safely</strong>. 
+            Without proper alignment, even very smart AI systems could make harmful mistakes.
+        </p>
+
+        <div class="feature-list">
+            <span>Value alignment</span>
+            <span>Interpretability</span>
+            <span>Robustness</span>
+            <span>Corrigibility</span>
+            <span>Fail-safe</span>
+            <span>Multi-agent safety</span>
+        </div>
+    </div>
+</body>
+        
+</body>
+</html>

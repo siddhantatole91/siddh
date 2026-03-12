@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future AI | Horizon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1a2639;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,20,50,0.05);
+            border: 1px solid #e9edf4;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.2rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b2b4a;
+            margin-bottom: 0.5rem;
+            text-transform: none; /* keep as is, but we manually ensure title case */
+        }
+
+        .subhead {
+            font-size: 1.25rem;
+            color: #2c3e58;
+            font-weight: 400;
+            border-bottom: 1px solid #d0dae8;
+            padding-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* intro card */
+        .intro-card {
+            background: white;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #2563eb;
+        }
+
+        .intro-card h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0b2b4a;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #2563eb;
+            display: inline-block;
+            padding-bottom: 0.25rem;
+        }
+
+        .intro-card p {
+            font-size: 1.15rem;
+            color: #2d3a4f;
+            margin-bottom: 1rem;
+        }
+
+        .button {
+            background: #f1f5f9;
+            border: 1px solid #b9c7dd;
+            color: #1e3a6b;
+            padding: 0.6rem 2rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            display: inline-block;
+            transition: 0.2s;
+            cursor: default;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .button:hover {
+            background: #e2eaf5;
+            border-color: #2563eb;
+        }
+
+        /* section headings */
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0f2b45;
+            margin: 2rem 0 1.5rem;
+            border-bottom: 2px solid #2563eb;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* grid cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border: 1px solid #e0e7ef;
+            transition: all 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 24px -8px rgba(0,35,70,0.1);
+            border-color: #a0bbd9;
+        }
+
+        .card h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #0f2b45;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: #36454f;
+            font-size: 1rem;
+        }
+
+        /* ethics row - replaced emojis with text labels */
+        .ethics-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem 2rem;
+            margin: 3rem 0;
+            border: 1px solid #dae2ed;
+            justify-content: center;
+        }
+
+        .ethics-item {
+            flex: 1 1 160px;
+            padding: 1rem 0.5rem;
+            background: #f8fafd;
+            border-radius: 2rem;
+            border: 1px solid #cbd6e6;
+            text-align: center;
+            font-weight: 500;
+            color: #1a3650;
+        }
+
+        /* road ahead section */
+        .road-section {
+            background: white;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            border: 1px solid #d9e2ef;
+            margin: 2rem 0;
+        }
+
+        .road-section h2 {
+            margin-top: 0;
+        }
+
+        .road-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            color: #2b3b55;
+        }
+
+        .tag-list {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: #1e3a6b;
+            font-weight: 500;
+        }
+
+        .tag-list span {
+            background: #eef4fa;
+            padding: 0.3rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            border: 1px solid #bfd0e5;
+        }
+
+        /* footer */
+        .footer {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            color: #546e8a;
+            border-top: 1px solid #ccd9ec;
+        }
+
+        /* ensure first letter of paragraphs is capitalized (they already are, but just in case) */
+        p::first-letter {
+            text-transform: uppercase;
+        }
+
+        /* override for intro paragraph if needed */
+        .intro-card p::first-letter {
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .intro-card { padding: 1.8rem; }
+            h1 { font-size: 2.8rem; }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <h1>AI Horizon</h1>
+            <div class="subhead">Intelligence Unfolding · Tomorrow Embedded</div>
+        </header>
+
+        <!-- intro / future AI -->
+        <section class="intro-card">
+            <h2>Beyond Narrow AI</h2>
+            <p>Future ai will not just be a tool—it will become a collaborative extension of human creativity, scientific discovery, and everyday life. From self-improving algorithms to conscious‑like reasoning, the next decades will redefine intelligence.</p>
+            <a href="synpax.html"><div class="button">Explore the Synapse →</div></a>
+        </section>
+
+        <!-- applications grid -->
+        <h2>Key Frontiers</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>AI‑Driven Science</h3>
+                <p>Automated laboratories, protein folding, fusion research—ai accelerates discovery at an exponential rate, solving problems once thought impossible.</p>
+            </div>
+            <div class="card">
+                <h3>Neural Interfaces</h3>
+                <p>Direct brain‑to‑ai communication will merge biological and digital thought, creating seamless access to knowledge and augmented senses.</p>
+            </div>
+            <div class="card">
+                <h3>Autonomous Systems</h3>
+                <p>Self‑driving cities, robotic swarms, and adaptive infrastructure—intelligent agents will manage complexity beyond human scale.</p>
+            </div>
+            <div class="card">
+                <h3>Generative Worlds</h3>
+                <p>Real‑time creation of virtual environments, synthetic media, and personalized experiences—blurring the line between reality and simulation.</p>
+            </div>
+        </div>
+
+        <!-- ethical considerations (professional, no emojis) -->
+        <div class="ethics-row">
+            <a href="safetyandalignment.html"><div class="ethics-item">Alignment & Safety</div></a>
+           <a href="superintelligent.html"> <div class="ethics-item">Super Intelligence</div></a>
+             <a href="response.html"><div class="ethics-item">Consciousness</div></a>
+            <a href="equal.html"> <div class="ethics-item">Equitable Access</div></a>
+        </div>
+
+        <!-- the road ahead -->
+        <section class="road-section">
+            <h2>The Road Ahead</h2>
+            <p>By 2040, ai is expected to outperform humans in most creative and scientific tasks. The real challenge will be integration—building a symbiosis that amplifies the best of humanity while navigating profound ethical waters. The future is not just automated; it is collaborative.</p>
+            <div class="tag-list">
+                <a href="adaptive.html"><span>Adaptive Governance</span></a>
+                <a href="explain.html"><span>Explainable Reasoning</span></a>
+                <a href="emotional.html"><span>Emotional Ai</span></a>
+                <a href="machine.html"><span>Quantum Machine Learning</span></a>
+            </div>
+        </section>
+
+        <!-- footer -->
+            </div>
+</body>
+</html>
